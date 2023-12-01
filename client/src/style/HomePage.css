@@ -1,0 +1,41 @@
+.Header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+  }
+  
+  label {
+    /* border: 1px solid black; */
+    width: 80vw;
+  }
+  
+  .topic-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 100vw;
+    height: 150px;
+    text-align: center;
+    color: rgb(47, 122, 130);
+    font-weight: 900;
+    font-size: 50px;
+  }
+  
+  .searchTourtistAttraction {
+    display: flex;
+    width: 80vw;
+    border: none;
+  }
+  
+  .searchTourtistAttraction:focus {
+    outline: none;
+  }
+  
+  .searchTourtistAttraction::placeholder {
+    text-align: center;
+    font-size: large;
+  }
+  
