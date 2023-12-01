@@ -32,6 +32,8 @@
   
   .searchTourtistAttraction:focus {
     outline: none;
+    text-align: center;
+    font-size:20px
   }
   
   .searchTourtistAttraction::placeholder {
