@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/TravelList.css";
+import { IoIosLink } from "react-icons/io";
 
 function Main({ list, setMessage, message }) {
  
@@ -25,6 +26,7 @@ function Main({ list, setMessage, message }) {
 
               <div className="category-wrapper">
                 <span>หมวด</span>
+
                 {item.tags.map((tag, j) => {
                   return (
                     <p
@@ -55,18 +57,17 @@ function Main({ list, setMessage, message }) {
                 })}
               </div>
 
-              <a
-                href="#"
-                className="copy-link"
+              <div 
+                className="copy-link"  
                 onClick={() => {
-                  navigator.clipboard.writeText(item.url);
-                }}
-              >
-                copy link
-              </a>
-              
+                  navigator.clipboard.writeText(item.url)
+                  alert(`Copy ${item.url} to Clipboard`)
+                  }}>
+                <IoIosLink/>
+              </div>
+                   
             </section>
-            
+
           </main>
         );
       })
