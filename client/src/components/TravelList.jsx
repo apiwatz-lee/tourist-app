@@ -1,24 +1,23 @@
 import React from "react";
-import "../style/Main.css";
+import "../style/TravelList.css";
 
 function Main({ list, setMessage, message }) {
  
-
-  return (
-    <>
-      {list.map((item, index) => {
+    const travelList =  list.map((item, index) => {
         return (
-          <div className="Main-wrapper" key={index}>
+          <main className="Main-wrapper" key={index}>
 
-            <div className="picture-container">
+            <section className="picture-container">
               <img className="picture-main" src={item.photos[0]} alt="" />
-            </div>
+            </section>
 
-            <div className="information-container">
-              <div className="topic">{item.title}</div>
-              <div className="description">
+            <section className="information-container">
+
+              <h1 className="topic">{item.title}</h1>
+
+              <p className="description">
                 {item.description.substring(0, 100)}
-              </div>
+              </p>
 
               <a className="readMore" href={item.url} target="_blank">
                 อ่านต่อ
@@ -28,7 +27,7 @@ function Main({ list, setMessage, message }) {
                 <span>หมวด</span>
                 {item.tags.map((tag, j) => {
                   return (
-                    <div
+                    <p
                       className="each-category"
                       key={j}
                       onClick={() => {
@@ -36,7 +35,7 @@ function Main({ list, setMessage, message }) {
                       }}
                     >
                       {tag}
-                    </div>
+                    </p>
                   );
                 })}
               </div>
@@ -66,10 +65,15 @@ function Main({ list, setMessage, message }) {
                 copy link
               </a>
               
-            </div>
-          </div>
+            </section>
+            
+          </main>
         );
-      })}
+      })
+
+  return (
+    <>
+      {travelList}
     </>
   );
 }
